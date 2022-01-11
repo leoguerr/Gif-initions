@@ -1,7 +1,15 @@
 // var search = document.getElementById("searchResults").value;
 var GiphyAPIKey = "69YdDv5rJNqo0tpHseZP6XyqSihO6MzA";
-var search = "dog";
+var search = "";
 var words = ["Annihilate", "Complacent", "Conceive", "Confine", "Demonstrate", "Deplete", "Desolate", "Erratic", "Excel", "Exhilarating", "Frankly", "Geriatric", "Hostile", "Lucrative", "Ornate", "Petulant", "Reluctantly", "Scrutinize", "Solidarity", "Unveil", "Contemplate", "Dreary", "Dubious", "Bittersweet", "Diminish" ];
+
+function randomWord() {
+  search = words[Math.floor(Math.random() * words.length)];
+  console.log("search " + search);
+  return search;
+};
+
+randomWord();
 
 function DictionaryAPI() {
   var requestUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/" + search;
@@ -65,5 +73,3 @@ function GiphyAPI() {
 //   searchForm.addEventListener("submit", GiphyAPI);
 DictionaryAPI();
 GiphyAPI();
-
-var words = ["Annihilate", "Complacent", "Conceive", "Confine", "Demonstrate", "Deplete", "Desolate", "Erratic", "Excel", "Exhilarating", "Frankly", "Geriatric", "Hostile", "Lucrative", "Ornate", "Petulant", "Reluctantly", "Scrutinize", "Solidarity", "Unveil", "Contemplate", "Dreary", "Dubious", "Bittersweet", "Diminish" ]
