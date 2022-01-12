@@ -9,6 +9,8 @@
    padding-top: 20%;
 }
 
+<<<<<<< HEAD
+=======
 body {
    background-image: url('assets/images/book.jpg');
    background-repeat: no-repeat;
@@ -16,6 +18,7 @@ body {
    background-size: cover;
  }
 
+>>>>>>> 2d0c170cb8fae090c0a20375aba7f600c871846f
  #collapsable {
     padding-top:5%;
     max-width: 100%;
@@ -23,11 +26,27 @@ body {
 
 .row .col.s6 {
   width: 50%;
+  padding-top: 5%;
+  align-items: center;
+  
 }
 
+<<<<<<< HEAD
+ #maincard {
+   padding-left: 30%;
+   padding-right: 25%;
+   padding-top: 3%;
+   
+ }
+  
+ 
+  
+
+=======
 .collapsible-body {
   
 }
+>>>>>>> 2d0c170cb8fae090c0a20375aba7f600c871846f
 
  @media (max-width: 800px) {
    .flex-container {
