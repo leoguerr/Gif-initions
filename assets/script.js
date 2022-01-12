@@ -67,3 +67,8 @@ DictionaryAPI();
 GiphyAPI();
 
 var words = ["Annihilate", "Complacent", "Conceive", "Confine", "Demonstrate", "Deplete", "Desolate", "Erratic", "Excel", "Exhilarating", "Frankly", "Geriatric", "Hostile", "Lucrative", "Ornate", "Petulant", "Reluctantly", "Scrutinize", "Solidarity", "Unveil", "Contemplate", "Dreary", "Dubious", "Bittersweet", "Diminish" ]
+
+//collapsable initiation 
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
