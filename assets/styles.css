@@ -6,5 +6,33 @@
 }
 
 #startBtn {
+   padding-top: 20%;
+}
+
+body {
+   background-image: url('assets/images/book.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+ }
+
+ #collapsable {
+    padding-top:5%;
+    max-width: 100%;
+ }
+
+.row .col.s6 {
+  width: 50%;
+}
+
+.collapsible-body {
+  
+}
+
+ @media (max-width: 800px) {
+   .flex-container {
+     flex-direction: column;
+   }
+ }
   padding-top: 20%;
 }

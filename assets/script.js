@@ -144,3 +144,8 @@ function GiphyAPI() {
       }
     });
 }
+
+//collapsable initiation 
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
