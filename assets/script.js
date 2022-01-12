@@ -28,14 +28,26 @@ var words = [
   "Bittersweet",
   "Diminish",
 ];
+var startBtn = document.querySelector("#startBtn");
 
+// will link to result page once its created
+// var resultsPage = "./"
+
+startBtn.addEventListener("click", function(){
+  randomWord();
+  FreeDictionaryAPI();
+  GiphyAPI();
+  // Will change from start screen to results page
+  //document.location.replace(resultsPage);
+})
+
+// function that pics a random word from words array
 function randomWord() {
   search = words[Math.floor(Math.random() * words.length)];
   console.log("search " + search);
   return search;
 }
 
-randomWord();
 
 // function to fetch Free Dictionary API
 function FreeDictionaryAPI() {
@@ -132,6 +144,3 @@ function GiphyAPI() {
       }
     });
 }
-
-FreeDictionaryAPI();
-GiphyAPI();
