@@ -31,14 +31,14 @@ var words = [
 var startBtn = document.querySelector("#startBtn");
 
 // will link to result page once its created
-// var resultsPage = "./"
+var resultsPage = "./Main.html"
 
 startBtn.addEventListener("click", function(){
   randomWord();
   FreeDictionaryAPI();
   GiphyAPI();
   // Will change from start screen to results page
-  //document.location.replace(resultsPage);
+  document.location.replace(resultsPage);
 })
 
 // function that pics a random word from words array
