@@ -1,94 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gif-initions</title>
-    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.js"
+      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+      crossorigin="anonymous"
+    ></script>
     <!-- Materialize CSS link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
     <header>
-        <!-- Navigation bar -->
-        <nav>
-            <div class="nav-wrapper indigo lighten-1">
-              <a href="#" class="brand-logo"><img class="responsive-img" src="./assets/images/logo.png"></a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Word of the Day</a></li>
-                <li><a href="badges.html">Word Game </a></li>
-                <li><a href="collapsible.html">Word Vault</a></li>
-                <li><a href="index.html">Home</a></li>
-              </ul>
-            </div>
-          </nav>
-        
-          <ul class="sidenav" id="mobile-demo">
+      <!-- Navigation bar -->
+      <nav>
+        <div class="nav-wrapper indigo lighten-1">
+          <a href="#" class="brand-logo"
+            ><img class="responsive-img" src="./assets/images/logo.png"
+          /></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul class="right hide-on-med-and-down">
             <li><a href="sass.html">Word of the Day</a></li>
-            <li><a href="badges.html">Word Game</a></li>
-            <li><a href="collapsible.html">World Vault</a></li>
+            <li><a href="badges.html">Word Game </a></li>
+            <li><a href="collapsible.html">Word Vault</a></li>
             <li><a href="index.html">Home</a></li>
           </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Word of the Day</a></li>
+        <li><a href="badges.html">Word Game</a></li>
+        <li><a href="collapsible.html">World Vault</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
     </header>
     <section id="maincard">
-        <!-- card 1 -->
-        <div class="row">
-          <div class="col s12 l10">
-            <div class="card">
-              <div class="card-image">
-                <img src="https://media4.giphy.com/media/3o751WIOb7W2f8ZfHy/giphy.gif?cid=ecf05e47c9761aef7bc759de57fb2c7ee1c5f687606d02b1&rid=giphy.gif&ct=g">
-                <span class="card-title">Card Title</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-              </div>
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-              </div>
+      <!-- card 1 -->
+      <div class="row">
+        <div class="col s12 l10">
+          <div class="card">
+            <div class="card-image">
+              <img
+                id="cardImage"
+                src="https://media4.giphy.com/media/3o751WIOb7W2f8ZfHy/giphy.gif?cid=ecf05e47c9761aef7bc759de57fb2c7ee1c5f687606d02b1&rid=giphy.gif&ct=g"
+              />
             </div>
+            <div id="cardContent" class="card-content"></div>
           </div>
         </div>
+      </div>
     </section>
-   
+
     <!-- collapsable -->
     <div class="flex-container" id="collapsable">
-    <ul class="collapsible" data-collapsible="accordion">
+      <ul class="collapsible" data-collapsible="accordion">
         <li class="active">
-          <div class="collapsible-header indigo lighten-4"><i class="material-icons">visibility</i>Words in motion!</div>
-          <div class="collapsible-body">
-            
-            
-           
+          <div class="collapsible-header indigo lighten-4">
+            <i class="material-icons">visibility</i>Words in motion!
+          </div>
+          <div id="wordsInMotion" class="collapsible-body"></div>
         </li>
         <li>
-          <div class="collapsible-header indigo lighten-4"><i class="material-icons">description</i>More info</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          <div class="collapsible-header indigo lighten-4">
+            <i class="material-icons">description</i>More info
+          </div>
+          <div id="moreInfo" class="collapsible-body"></div>
         </li>
         <li>
-          <div class="collapsible-header indigo lighten-4"><i class="material-icons">settings_voice</i>Phonetics</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          <div class="collapsible-header indigo lighten-4">
+            <i class="material-icons">settings_voice</i>Phonetics
+          </div>
+          <div id="phonetics" class="collapsible-body"></div>
         </li>
       </ul>
     </div>
-   
 
-    <!-- backgound image --> 
-        <style>
-        body {
-          background-image: url('assets/images/blur.png');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: cover;
-        }
-        </style>
-        
-    
-    </body>
-<!-- Materialize Javascript link -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="./assets/script.js"></script>
+    <h1 class="center-align" id="startBtn">
+      <a class="waves-effect waves-light btn-large pulse blue-grey z-depth-3"
+        >Random Word!</a
+      >
+    </h1>
 
+    <!-- backgound image -->
+    <style>
+      body {
+        background-image: url("assets/images/blur.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    </style>
+  </body>
+  <!-- Materialize Javascript link -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/script.js"></script>
 </html>
