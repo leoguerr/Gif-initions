@@ -1,11 +1,29 @@
+#errorCard {
+  max-width: 600px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #startBtn {
    padding-top: 20%;
 }
 
+<<<<<<< HEAD
+=======
+body {
+   background-image: url('assets/images/book.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+ }
+
+>>>>>>> 2d0c170cb8fae090c0a20375aba7f600c871846f
  #collapsable {
     padding-top:5%;
     max-width: 100%;
  }
+
 .row .col.s6 {
   width: 50%;
   padding-top: 5%;
@@ -13,6 +31,7 @@
   
 }
 
+<<<<<<< HEAD
  #maincard {
    padding-left: 30%;
    padding-right: 25%;
@@ -23,9 +42,16 @@
  
   
 
+=======
+.collapsible-body {
+  
+}
+>>>>>>> 2d0c170cb8fae090c0a20375aba7f600c871846f
 
  @media (max-width: 800px) {
    .flex-container {
      flex-direction: column;
    }
  }
+  padding-top: 20%;
+}

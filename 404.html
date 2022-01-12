@@ -7,24 +7,64 @@
     <title>uh-oh :(</title>
   </head>
   <body>
-    <div
-      style="width: 100%; height: 0; padding-bottom: 100%; position: relative"
-    >
-      <iframe
-        src="https://giphy.com/embed/DHBGehJ3FSZEygszX3"
-        width="100%"
-        height="100%"
-        style="position: absolute"
-        frameborder="0"
-        class="giphy-embed"
-        allowfullscreen
-      ></iframe>
-    </div>
-    <p>
-      <a
-        href="https://giphy.com/gifs/pixelart-pixelplanet-pixelplanettoday-DHBGehJ3FSZEygszX3"
-        >via GIPHY</a
-      >
-    </p>
+
   </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gif-initions</title>
+    <!-- Materialize CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<header>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="nav-wrapper indigo lighten-1">
+          <a href="#!" class="brand-logo">Logo</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">Word of the Day</a></li>
+            <li><a href="badges.html">Word Game </a></li>
+            <li><a href="collapsible.html">Word Vault</a></li>
+            <li><a href="mobile.html">Home</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Word of the Day</a></li>
+        <li><a href="badges.html">Word Game</a></li>
+        <li><a href="collapsible.html">World Vault</a></li>
+        <li><a href="mobile.html">Home</a></li>
+      </ul>
+</header>
+
+<div class="row">
+    <div id="errorCard" class="card">
+      <div class="card-image">
+        <img src="https://media1.giphy.com/media/DHBGehJ3FSZEygszX3/giphy.gif">
+      </div>
+      <div class="card-content">
+        <p>Well that wasn't supposed to happen. Try clicking the button below for a new random word!</p>
+      </div>
+    </div>
+</div>
+  
+
+<!-- Randomization word button -->
+    <h1 class= "center-align" id="startBtn" style="padding-top: 0%;">
+    <a class="waves-effect waves-light btn-large pulse blue-grey z-depth-3">Random Word!</a>
+    </h1>
+</section>
+</body>
+<!-- Materialize Javascript link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./assets/script.js"></script>
 </html>
