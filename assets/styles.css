@@ -1,3 +1,10 @@
+#errorCard {
+  max-width: 600px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #startBtn {
-   padding-top: 20%;
+  padding-top: 20%;
 }
