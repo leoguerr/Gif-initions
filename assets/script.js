@@ -45,6 +45,20 @@ startBtn.addEventListener("click", function(){
 function randomWord() {
   search = words[Math.floor(Math.random() * words.length)];
   console.log("search " + search);
+
+  // Code to add new word to an array on local storage
+  var pastWords = JSON.parse(localStorage.getItem("pastWords"));
+    // if theres no past words array, create one
+    if(pastWords == null){
+      pastWords = [];
+    }
+    // Save current search to local storage
+    localStorage.setItem("search", search);
+    // Add current search to array of past searches
+    pastWords.push(search);
+    // save new array to local storage
+    localStorage.setItem("pastWords", JSON.stringify(pastWords));
+
   return search;
 }
 
