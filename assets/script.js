@@ -28,10 +28,9 @@ var words = [
   "Bittersweet",
   "Diminish",
 ];
-var startBtn = document.querySelector("#startBtn");
-
-// will link to result page once its created
+var startBtn = document.querySelector("#startbtn");
 var resultsPage = "./Main.html"
+var timeLeft = 5;
 
 startBtn.addEventListener("click", function(){
   randomWord();
@@ -54,6 +53,30 @@ function randomWord() {
     }
     // Save current search to local storage
     localStorage.setItem("search", search);
+
+
+    if(pastWords.length == words.length){
+      // time function to add a message under our start button
+        // var timeInterval = setInterval(function () {
+        // $("<p>You've seen all the words! Starting you over!</p>").appendTo(startBtn)
+        // timeLeft--;
+        // if(timeLeft === 0){
+        //   clearInterval(timeInterval);
+        // }
+        // }, 1000);
+
+        pastWords = [];
+        localStorage.setItem("pastWords", JSON.stringify(pastWords));
+        // location.reload();
+      }else{
+        // Make sure new word has not been searched already
+        for( i = 0 ; i < words.length ; i++){
+            if(search == pastWords[i]){
+              randomWord();
+            }
+        }
+      }
+
     // Add current search to array of past searches
     pastWords.push(search);
     // save new array to local storage
