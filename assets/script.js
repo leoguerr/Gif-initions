@@ -32,7 +32,10 @@ var words = [
   "Bittersweet",
   "Diminish",
 ];
-var startBtn = document.querySelector("#startBtn");
+
+var startBtn = document.querySelector("#startbtn");
+var resultsPage = "./Main.html"
+var timeLeft = 5;
 
 // will link to result page once its created
 var resultsPage = "./Main.html";
@@ -58,6 +61,40 @@ function randomWord() {
 
   // Code to add new word to an array on local storage
   var pastWords = JSON.parse(localStorage.getItem("pastWords"));
+    // if theres no past words array, create one
+    if(pastWords == null){
+      pastWords = [];
+    }
+    // Save current search to local storage
+    localStorage.setItem("search", search);
+
+    if(pastWords.length == words.length){
+      // time function to add a message under our start button
+        // var timeInterval = setInterval(function () {
+        // $("<p>You've seen all the words! Starting you over!</p>").appendTo(startBtn)
+        // timeLeft--;
+        // if(timeLeft === 0){
+        //   clearInterval(timeInterval);
+        // }
+        // }, 1000);
+
+        pastWords = [];
+        localStorage.setItem("pastWords", JSON.stringify(pastWords));
+        // location.reload();
+      }else{
+        // Make sure new word has not been searched already
+        for( i = 0 ; i < words.length ; i++){
+            if(search == pastWords[i]){
+              randomWord();
+            }
+        }
+      }
+
+    // Add current search to array of past searches
+    pastWords.push(search);
+    // save new array to local storage
+    localStorage.setItem("pastWords", JSON.stringify(pastWords));
+
   // if theres no past words array, create one
   if (pastWords == null) {
     pastWords = [];
