@@ -23,7 +23,7 @@
 /* Main card placement css */
  #maincard {
    padding-left: 30%;
-   padding-right: 25%;
+   padding-right: 30%;
    padding-top: 3%;
    
  }
@@ -38,11 +38,26 @@
   display: flex;
   flex-wrap: wrap;
 }
+/* footer css to place at bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* makes footer links in-line */
+.page-footer {
+  padding-top: 5px;
+  opacity: 80%;
+}
 
  @media (max-width: 756px) {
    .flex-container {
      flex-direction: column;
    }
  }
-  padding-top: 20%;
-}
+  
