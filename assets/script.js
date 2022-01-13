@@ -12,7 +12,7 @@ var words = [
   "Confine",
   "Demonstrate",
   "Deplete",
-  "Desolate",
+  "Deserted",
   "Erratic",
   "Excel",
   "Exhilarating",
@@ -38,12 +38,18 @@ var startBtn = document.querySelector("#startBtn");
 var resultsPage = "./Main.html";
 
 startBtn.addEventListener("click", function () {
+  // Will change from start screen to results page
+  document.location.replace(resultsPage);
+});
+
+if (
+  document.location.href ==
+  "file:///D:/programming/codingcamp/Projects/Gif-initions/Main.html"
+) {
   randomWord();
   FreeDictionaryAPI();
   GiphyAPI();
-  // Will change from start screen to results page
-  // document.location.replace(resultsPage);
-});
+}
 
 // function that pics a random word from words array
 function randomWord() {
@@ -69,6 +75,8 @@ function randomWord() {
 // function to fetch Free Dictionary API
 function FreeDictionaryAPI() {
   var requestUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/" + search;
+
+  console.log("https://api.dictionaryapi.dev/api/v2/entries/en/" + search);
 
   fetch(requestUrl)
     .then(function (response) {
@@ -106,6 +114,9 @@ function FreeDictionaryAPI() {
       pronunciation.textContent = data[0].phonetics[0].text;
       phonetics.append(pronunciation);
 
+      var linebreak = document.createElement("br");
+      phonetics.appendChild(linebreak);
+
       // returns the related pronunciation audio file
       var audio = document.createElement("audio");
       var controls = document.createAttribute("controls");
@@ -129,6 +140,14 @@ function GiphyAPI() {
     GiphyAPIKey +
     "&limit=26";
 
+  console.log(
+    "http://api.giphy.com/v1/gifs/search?q=" +
+      search +
+      "&api_key=" +
+      GiphyAPIKey +
+      "&limit=26"
+  );
+
   fetch(requestUrl)
     .then(function (response) {
       // if the the HTTP status code of the response is 404, the user is redirected
@@ -143,7 +162,7 @@ function GiphyAPI() {
       wordsInMotion.innerHTML = "";
 
       // returns first related gif
-      cardImage.src = data.data[0].images.fixed_height.url;
+      cardImage.src = data.data[0].images.original.url;
 
       // this returns the image url of the following 25 related gifs
       for (var i = 1; i < data.data.length; i++) {

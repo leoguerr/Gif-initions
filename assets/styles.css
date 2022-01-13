@@ -34,11 +34,6 @@
   
  }
 
- #phonetics {
-  display: flex;
-  flex-wrap: wrap;
-}
-
  @media (max-width: 756px) {
    .flex-container {
      flex-direction: column;
