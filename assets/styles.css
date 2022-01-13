@@ -4,51 +4,37 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+/* centers start button on index start page */
 #startBtn {
    padding-top: 20%;
 }
-
-<<<<<<< HEAD
-=======
-body {
-   background-image: url('assets/images/book.jpg');
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-size: cover;
- }
-
->>>>>>> 2d0c170cb8fae090c0a20375aba7f600c871846f
+/* collapsable positioning from main card */
  #collapsable {
     padding-top:5%;
     max-width: 100%;
  }
-
+/* Maincard formnatting to fit page */
 .row .col.s6 {
   width: 50%;
   padding-top: 5%;
   align-items: center;
   
 }
-
-<<<<<<< HEAD
+/* Main card placement css */
  #maincard {
    padding-left: 30%;
    padding-right: 25%;
    padding-top: 3%;
    
  }
+  /* logo CSS to fit nav bar */
+ .responsive-img {
+  width: 170px;
+  height: 300px;
   
- 
-  
+ }
 
-=======
-.collapsible-body {
-  
-}
->>>>>>> 2d0c170cb8fae090c0a20375aba7f600c871846f
-
- @media (max-width: 800px) {
+ @media (max-width: 756px) {
    .flex-container {
      flex-direction: column;
    }
