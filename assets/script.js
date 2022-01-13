@@ -43,16 +43,10 @@ var resultsPage = "./Main.html";
 startBtn.addEventListener("click", function () {
   // Will change from start screen to results page
   document.location.replace(resultsPage);
-});
-
-if (
-  document.location.href ==
-  "file:///D:/programming/codingcamp/Projects/Gif-initions/Main.html"
-) {
   randomWord();
   FreeDictionaryAPI();
   GiphyAPI();
-}
+});
 
 // function that pics a random word from words array
 function randomWord() {
@@ -94,17 +88,6 @@ function randomWord() {
     pastWords.push(search);
     // save new array to local storage
     localStorage.setItem("pastWords", JSON.stringify(pastWords));
-
-  // if theres no past words array, create one
-  if (pastWords == null) {
-    pastWords = [];
-  }
-  // Save current search to local storage
-  localStorage.setItem("search", search);
-  // Add current search to array of past searches
-  pastWords.push(search);
-  // save new array to local storage
-  localStorage.setItem("pastWords", JSON.stringify(pastWords));
 
   return search;
 }
