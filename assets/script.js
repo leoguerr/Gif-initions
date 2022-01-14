@@ -6,3 +6,8 @@ var resultsPage = "./Main.html";
 startBtnMain.addEventListener("click", function () {
   document.location.replace(resultsPage);
 });
+
+// Side nav initiation
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
