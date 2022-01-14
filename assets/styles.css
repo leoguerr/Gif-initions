@@ -6,21 +6,29 @@
 }
 /* centers start button on index start page */
 #startBtn {
-   padding-top: 20%;
+  padding-top: 20%;
 }
 /* collapsable positioning from main card */
- #collapsable {
-    padding-top:5%;
-    max-width: 100%;
- }
+#collapsable {
+  padding-top: 5%;
+  max-width: 100%;
+}
 /* Maincard formnatting to fit page */
 .row .col.s6 {
   width: 50%;
   padding-top: 5%;
   align-items: center;
-  
 }
 /* Main card placement css */
+
+#maincard {
+  padding-left: 30%;
+  padding-right: 25%;
+  padding-top: 3%;
+}
+/* logo CSS to fit nav bar */
+.responsive-img {
+
  #maincard {
    padding-left: 30%;
    padding-right: 30%;
@@ -29,10 +37,17 @@
  }
   /* logo CSS to fit nav bar */
  .responsive-img {
+
   width: 170px;
   height: 300px;
-  
- }
+}
+
+
+@media (max-width: 756px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
 
 
  #phonetics {
@@ -62,3 +77,4 @@ main {
    }
  }
   
+
