@@ -57,11 +57,14 @@ function randomWord() {
     var timeInterval = setInterval(function () {
       timerMessage.textContent =
         "You've seen all the words! Starting you over!";
-      console.log("timerstarting");
       timeLeft--;
       if (timeLeft === 0) {
         clearInterval(timeInterval);
         timeLeft = 5;
+        timerMessage.innerHTML = "";
+        randomWord();
+        FreeDictionaryAPI();
+        GiphyAPI();
       }
     }, 1000);
 
@@ -175,7 +178,7 @@ function GiphyAPI() {
       wordsInMotion.innerHTML = "";
 
       // returns first related gif
-      cardImage.src = data.data[0].images.original.url;
+      cardImage.src = data.data[0].images.fixed_width.url;
 
       // this returns the image url of the following 25 related gifs
       for (var i = 1; i < data.data.length; i++) {
@@ -194,14 +197,11 @@ GiphyAPI();
 
 startBtn.addEventListener("click", function () {
   randomWord();
-  FreeDictionaryAPI();
-  GiphyAPI();
+  // FreeDictionaryAPI();
+  // GiphyAPI();
 });
 
 //collapsable initiation
 $(document).ready(function () {
   $(".collapsible").collapsible();
-  if (document.location.pathname.includes("./index.html")) {
-    console.log("will it work?");
-  }
 });
