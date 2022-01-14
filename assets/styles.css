@@ -34,7 +34,7 @@
   
  }
 
-<<<<<<< HEAD
+
  #phonetics {
   display: flex;
   flex-wrap: wrap;
@@ -56,8 +56,6 @@ main {
   opacity: 80%;
 }
 
-=======
->>>>>>> 73f4acdd4d7e6b3ea2f8da91250b561882d57197
  @media (max-width: 756px) {
    .flex-container {
      flex-direction: column;
