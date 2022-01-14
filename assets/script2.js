@@ -197,8 +197,8 @@ GiphyAPI();
 
 startBtn.addEventListener("click", function () {
   randomWord();
-  // FreeDictionaryAPI();
-  // GiphyAPI();
+  FreeDictionaryAPI();
+  GiphyAPI();
 });
 
 //collapsable initiation
