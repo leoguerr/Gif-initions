@@ -26,22 +26,25 @@
   padding-right: 25%;
   padding-top: 3%;
 }
+
+#timerMessage {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
 /* logo CSS to fit nav bar */
 .responsive-img {
-
- #maincard {
-   padding-left: 30%;
-   padding-right: 30%;
-   padding-top: 3%;
-   
- }
-  /* logo CSS to fit nav bar */
- .responsive-img {
-
   width: 170px;
   height: 300px;
 }
 
+/* #maincard {
+   padding-left: 30%;
+   padding-right: 30%;
+   padding-top: 3%;
+   
+ } */
 
 @media (max-width: 756px) {
   .flex-container {
@@ -49,11 +52,6 @@
   }
 }
 
-
- #phonetics {
-  display: flex;
-  flex-wrap: wrap;
-}
 /* footer css to place at bottom */
 body {
   display: flex;
@@ -71,10 +69,8 @@ main {
   opacity: 80%;
 }
 
- @media (max-width: 756px) {
-   .flex-container {
-     flex-direction: column;
-   }
- }
-  
-
+@media (max-width: 756px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
