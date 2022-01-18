@@ -24,7 +24,7 @@ The user can select the the **Random Word** button again to generate a new word,
 
 # Link
 
-https://github.com/leoguerr/Gif-initions
+https://leoguerr.github.io/Gif-initions/index.html
 
 # Sources
 
