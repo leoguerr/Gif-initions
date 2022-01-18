@@ -150,14 +150,14 @@ function FreeDictionaryAPI() {
 // function to fetch GIPHY API
 function GiphyAPI() {
   var requestUrl =
-    "http://api.giphy.com/v1/gifs/search?q=" +
+    "https://api.giphy.com/v1/gifs/search?q=" +
     search +
     "&api_key=" +
     GiphyAPIKey +
     "&limit=26";
 
   console.log(
-    "http://api.giphy.com/v1/gifs/search?q=" +
+    "https://api.giphy.com/v1/gifs/search?q=" +
       search +
       "&api_key=" +
       GiphyAPIKey +
