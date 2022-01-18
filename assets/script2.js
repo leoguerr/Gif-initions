@@ -205,3 +205,8 @@ startBtn.addEventListener("click", function () {
 $(document).ready(function () {
   $(".collapsible").collapsible();
 });
+
+// Side nav initiation
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
