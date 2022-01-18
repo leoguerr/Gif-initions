@@ -120,3 +120,8 @@ function hideQuestions4 () {
     NextButton4.classList.add('hide')
     questionContainerElement.classList.remove('hide')
 }
+
+// Side nav initiation
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
