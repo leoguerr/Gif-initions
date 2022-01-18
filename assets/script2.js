@@ -57,11 +57,14 @@ function randomWord() {
     var timeInterval = setInterval(function () {
       timerMessage.textContent =
         "You've seen all the words! Starting you over!";
-      console.log("timerstarting");
       timeLeft--;
       if (timeLeft === 0) {
         clearInterval(timeInterval);
         timeLeft = 5;
+        timerMessage.innerHTML = "";
+        randomWord();
+        FreeDictionaryAPI();
+        GiphyAPI();
       }
     }, 1000);
 
@@ -147,14 +150,14 @@ function FreeDictionaryAPI() {
 // function to fetch GIPHY API
 function GiphyAPI() {
   var requestUrl =
-    "http://api.giphy.com/v1/gifs/search?q=" +
+    "https://api.giphy.com/v1/gifs/search?q=" +
     search +
     "&api_key=" +
     GiphyAPIKey +
     "&limit=26";
 
   console.log(
-    "http://api.giphy.com/v1/gifs/search?q=" +
+    "https://api.giphy.com/v1/gifs/search?q=" +
       search +
       "&api_key=" +
       GiphyAPIKey +
@@ -175,7 +178,7 @@ function GiphyAPI() {
       wordsInMotion.innerHTML = "";
 
       // returns first related gif
-      cardImage.src = data.data[0].images.original.url;
+      cardImage.src = data.data[0].images.fixed_width.url;
 
       // this returns the image url of the following 25 related gifs
       for (var i = 1; i < data.data.length; i++) {
@@ -201,7 +204,4 @@ startBtn.addEventListener("click", function () {
 //collapsable initiation
 $(document).ready(function () {
   $(".collapsible").collapsible();
-  if (document.location.pathname.includes("./index.html")) {
-    console.log("will it work?");
-  }
 });
